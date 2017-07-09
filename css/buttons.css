@@ -1,0 +1,131 @@
+.bottomnav{
+  color:grey;
+    width:70%;
+    position: fixed;
+    bottom: 5px;
+    transform: translate(35%,0);
+    z-index:10;
+}
+.bnavlist li{
+    color:white;
+    display: inline;
+    margin-right:2%;
+    font-size: 0.7vw;
+    font-family: 'Raleway';
+
+}
+
+@media (max-width: 750px) and (min-width: 450px){
+  .bottomnav{
+    transform: translate(36%,0);
+  }
+}
+@media (max-width: 450px){
+  .bottomnav{
+    width: 100%;
+    transform: translate(0,0);
+  }
+  .bnavlist li{
+    margin-right: 1%;
+    font-size: 1.6vw;
+  }
+  .bottomnav ul{
+    padding-left: 25px;
+  }
+}
+*,
+
+
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+/* -------- Sticky-Footer Setup -------- */
+/*html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  /* Margin bottom by footer height */
+  /*margin-bottom: 60px;
+  line-height: 1.6;
+  background: #eeeeee;
+}*/
+
+
+a{
+  color:white;
+  font-weight: bold;
+  font-family: 'Lato';
+  font-size: 2.8vmin;
+  padding: 2vmin;
+  padding-right: 10vmin;
+  padding-left: 10vmin;
+
+
+  text-decoration: none !important;
+}
+
+.bottomnav a{
+  letter-spacing: 1vmin;
+}
+a:hover{
+  color: #3498db;
+}
+footer {
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+
+  background: #3498db;
+  color: white;
+}
+
+/* ------- Style! -------- */
+.content {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 100%;
+  margin: auto;
+}
+
+
+
+
+#add {
+  display: block;
+  width: 100px;
+  padding: 10px 0;
+  margin: 0 auto;
+  border: none;
+  border-radius: 2px;
+  box-shadow: 1px 1px 3px #999999;
+  color: #999999;
+}
+#add:hover {
+  box-shadow: none;
+  -webkit-transition: all .1s ease-in-out;
+  transition: all .1s ease-in-out;
+  background-color: #5faee3;
+  color: white;
+}
+#add:focus {
+  outline: none;
+}
+#add span {
+  font-size: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+footer p {
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  text-align: center;
+}

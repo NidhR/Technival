@@ -1,0 +1,69 @@
+application: technival-1365
+version: v2
+runtime: python27
+api_version: 1
+threadsafe: yes
+
+handlers:
+
+- url: /myfavicon\.ico
+  static_files: myfavicon.ico
+  upload: myfavicon\.ico
+
+- url: /js
+  static_dir: js
+
+- url: /css
+  static_dir: css
+
+- url: /images
+  static_dir: images
+
+- url: /(about|campus|contact)
+  mime_type: text/html
+  static_files: src/\1.html
+  upload: src/(.+)
+
+- url: /
+  script: main.app
+
+- url: /src
+  static_dir: src
+
+- url: /.*
+  static_dir: /html
+
+
+- url: /src/(.*)
+  script: main.app
+
+- url: /campus
+  script: routing.app
+
+- url: /about
+  script: routing.app
+
+- url: /contact
+  script: routing.app
+
+
+skip_files:
+- ^(.*/)?app\.yaml
+- ^(.*/)?app\.yml
+- ^(.*/)?#.*#
+- ^(.*/)?.*~
+- ^(.*/)?.*\.py[co]
+- ^(.*/)?.*/RCS/.*
+- ^(.*/)?\..*
+- ^(.*/)?tests$
+- ^(.*/)?test$
+- ^test/(.*/)?
+- ^COPYING.LESSER
+- ^README\..*
+- \.gitignore
+- ^\.git/.*
+- \.*\.lint$
+- ^fabfile\.py
+- ^testrunner\.py
+  - ^grunt\.js
+  - ^node_modules/(.*/)?
